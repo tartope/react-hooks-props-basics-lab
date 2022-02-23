@@ -11,8 +11,9 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Home />
-      <About />
+      {/* to pass props from parent to child: create 'variableName' and assign to a value in parent component. use props.variableName in child component. see below. */}
+      <Home name={user.name} city={user.city} color={user.color} /> {/* <-- inside <Home component/>: iceCream={"chocolate"} car={'wrx'} animal={'cat'} number={1} */}
+      <About bio={user.bio} links={user.links}/>
     </div>
   );
 }
